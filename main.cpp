@@ -16,6 +16,8 @@ int main ()
 {
     cout<< "Please input five judge scores: ";
     getJudgeData();
+    findLowest(number1, number2, number3, number4, number5);
+    findHighest(number1, number2, number3, number4, number5);
     return 0;
     
 }
@@ -36,12 +38,53 @@ void getJudgeData ()
         cout<< "Scores cannot be more than 10.";
         return;
     }
-    else
-    {
-        cout<< "congrats.";
         return;
     }
     
     return;
 }
 
+int findLowest(int number1, int number2, int number3, int number4, int number5)
+{
+	int lowestNumber = number1;
+	
+	if (lowestNumber > number2) 
+	{
+		lowestNumber = number2;
+	} else if(lowestNumber > number3)
+	{
+		lowestNumber = number3;
+	} else if(lowestNumber > number4)
+	{
+		lowestNumber = number4;
+	} else if(lowestNumber > number5)
+	{
+		lowestNumber = number5;
+	}
+	return lowestNumber;
+	
+}
+
+// declares findHighest function
+int findHighest(int number1, int number2, int number3, int number4, int number5)
+{
+	int highestNumber = number5;
+	
+	if(highestNumber < number1)
+	{
+		highestNumber = number1;
+	} else if(highestNumber < number2)
+	{
+		highestNumber = number2;
+	} else if(highestNumber < number3)
+	{
+		highestNumber = number3;
+	} else if(highestNumber < number4)
+	{
+		highestNumber = number4;N
+	} else if(highestNumber < number5)
+	{
+		highestNumber = number5;
+	}
+	return highestNumber;
+}
