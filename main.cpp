@@ -88,3 +88,15 @@ int findHighest(int number1, int number2, int number3, int number4, int number5)
 	}
 	return highestNumber;
 }
+
+void calcScore(double number1, double number2, double number3, double number4, double number5){
+	int highestNumber = findHighest(number1, number2, number3, number4, number5);
+	int lowestNumber = findLowest(number1, number2, number3, number4, number5);
+	double totalScore = number1+number2+number3+number4+number5;
+	
+	double finalScore = (totalScore - highestNumber - lowestNumber) / 3;
+	
+	cout << "Highest Score: " << highestNumber << endl;
+	cout << "Lowest Score: " << lowestNumber << endl;
+	cout << "Final Score: " << finalScore << endl;
+}
